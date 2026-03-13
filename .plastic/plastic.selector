@@ -1,0 +1,4 @@
+repository "delta2dgame/delta2dgame@9072343029743@cloud"
+  path "/"
+    br "/main"
+    co "/main"
