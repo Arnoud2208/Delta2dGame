@@ -28,4 +28,13 @@ public class EnemyMovement : MonoBehaviour
         movingRight = !movingRight;
         transform.eulerAngles = new Vector3(0, movingRight ? 0 : 180, 0);
     }
+
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(groundCheck.position, groundCheck.position + Vector3.down * groundCheckDistance);
+        }
+    }
 }
